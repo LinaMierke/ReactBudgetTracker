@@ -4,7 +4,6 @@
 - Learn how to work with state using the Context API
 - Learn about actions, reducers, and the dispatch function
 
-
 ## Authors
 
 Lina Mierke
@@ -16,12 +15,9 @@ This project is licensed under the [LinaMierke] License - see the LICENSE.md fil
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+Inspiration, code turotial
 
-- HackerRank (https://www.hackerrank.com)
-- CodeSignal (https://www.codesignal.com)
-- LeetCode (https://www.leetcode.com)
-
+- BudgetApp Tutorial (https://www.youtube.com/watch?v=aeYxBd1it7I)
 
 ### `npm start`
 
@@ -30,7 +26,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-
 
 # ReactBudgetTracker
