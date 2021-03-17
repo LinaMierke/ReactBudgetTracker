@@ -12,6 +12,7 @@ const initialState = {
   expenses: [
     { id: 12, name: "shopping", cost: 40 },
     { id: 13, name: "holiday", cost: 400 },
+    { id: 15, name: "car service", cost: 300 },
   ],
 };
 // understand state: is the initial observational information that can be change, props is the propeties of description that can't be change for an object like the id, or other name or age etc the propeties and the values are state becaus ethey can change
