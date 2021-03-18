@@ -33,7 +33,7 @@ const initialState = {
   expenses: [
     { id: uuidv4(), name: 'Shopping', cost: 40 },
     { id: uuidv4(), name: 'Holiday', cost: 400 },
-    { id: uuidv4(), name: 'car service', cost: 50 },
+    { id: uuidv4(), name: 'Gas', cost: 50 },
   ],
 };
 export const AppContext = createContext();
