@@ -3,6 +3,7 @@
 - We’ll learn how break down a UI into React components
 - Learn how to work with state using the Context API
 - Learn about actions, reducers, and the dispatch function
+- Learn the use of props, and hooks on React.
 
 ## Authors
 
@@ -29,4 +30,4 @@ You will also see any lint errors in the console.
 
 # ReactBudgetTracker Netlify Deploy
 
-Deployed Project [https://budgetapptracker.netlify.app/]
+Deployed Project : [React Budget Tracker](https://budgetapptracker.netlify.app/)
