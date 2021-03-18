@@ -9,7 +9,14 @@ export const AppReducer = (state, action) => {
             return {
                 ...state,
                 expenses: [...state.expenses, action.payload]
-            }
+            };
+            case 'DELETE_EXPENSE':
+              return {
+                ...state,
+                expenses: state.expenses.filter (
+                  (expense) => expense.id !== action.payload
+                ),
+              }
         default: 
             return state;
     }
@@ -33,7 +40,7 @@ export const AppContext = createContext();
 
 //CreateContext: holds the state and pass it to the components
 
-// userreducer: const [state, dispatch] = useReducer(reducer, initialState);
+// useReducer: const [state, dispatch] = useReducer(reducer, initialState);
 //The first and most important thing to understand about a reducer is that it will always only return one value. useful for applying a bit of logic to a group of values and ending up with another single result.
 //^^^It’s the same sort of concept, but returns two elements as an array, the current state and a dispatch function.
 //A reducer is a pure function that takes the previous state and an action as arguments and returns a new state.

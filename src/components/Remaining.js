@@ -7,9 +7,10 @@ const Remaining = () => {
   const totalExpenses = expenses.reduce((total, item) => {
     return (total = total + item.cost);
   }, 0);
-
+// if the total expense is bigger than budget we will call this function. 
+  const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success'
   return (
-    <div className="alert alert-success">
+    <div className={`alert ${alertType}`}>
       <span>Remaining: ${budget - totalExpenses}</span>
     </div>
   );
