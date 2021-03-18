@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-
+import {v4 as uuidv4} from 'uuid'
                 //copying  the current existing state and overwrite with the new expenses object, and the expenses object is going to be a copy of the current expenses array with whatever was in the payload added to the end of the array
 
 export const AppReducer = (state, action) => {
@@ -16,7 +16,12 @@ export const AppReducer = (state, action) => {
                 expenses: state.expenses.filter (
                   (expense) => expense.id !== action.payload
                 ),
-              }
+              };
+              case 'SET_BUDGET':
+                return {
+                  ...state,
+                  budget: action.payload,
+                };
         default: 
             return state;
     }
@@ -26,9 +31,9 @@ export const AppReducer = (state, action) => {
 const initialState = {
   budget: 2000,
   expenses: [
-    { id: 12, name: 'Shopping', cost: 40 },
-    { id: 32, name: 'Holiday', cost: 400 },
-    { id: 13, name: 'car service', cost: 50 },
+    { id: uuidv4(), name: 'Shopping', cost: 40 },
+    { id: uuidv4(), name: 'Holiday', cost: 400 },
+    { id: uuidv4(), name: 'car service', cost: 50 },
   ],
 };
 export const AppContext = createContext();
