@@ -7,11 +7,11 @@ const ExpenseList = () => {
   const { expenses } = useContext(AppContext);
   return (
     <ul className="list-group">
-      {expenses.map((expenses) => (
+      {expenses.map((expense) => (
         <ExpenseItem
-          id={expenses.id}
-          name={expenses.name}
-          cost={expenses.cost}
+          id={expense.id}
+          name={expense.name}
+          cost={expense.cost}
         />
       ))}
     </ul>
