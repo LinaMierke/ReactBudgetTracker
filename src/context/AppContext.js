@@ -1,8 +1,18 @@
 import { createContext, useReducer } from "react";
+import { v4 as uuidv4 } from 'uuid';
+
+
 const AppReducer = (state, action) => {
+    //switch and case are like  aif statement
     switch(action.type) {
+        case 'ADD-EXPENSE':
+            return {
+                //copying  the current existing state and overwrite with the new expenses object, and the expenses object is going to be a copy of the current expenses array with whatever was in the payload added to the end of the array
+                ...state,
+                expenses: [...state.expenses, action.payload]
+            }
         default: 
-            return state
+            return state;
     }
 }
 
@@ -10,9 +20,11 @@ const AppReducer = (state, action) => {
 const initialState = {
   budget: 2000,
   expenses: [
-    { id: 12, name: "shopping", cost: 40 },
-    { id: 13, name: "holiday", cost: 400 },
-    { id: 15, name: "car service", cost: 300 },
+    { id: uuidv4(), name: 'Shopping', cost: 50 },
+		{ id: uuidv4(), name: 'Holiday', cost: 300 },
+		{ id: uuidv4(), name: 'Transportation', cost: 70 },
+		{ id: uuidv4(), name: 'Fuel', cost: 40 },
+		{ id: uuidv4(), name: 'Child Care', cost: 500 },
   ],
 };
 // understand state: is the initial observational information that can be change, props is the propeties of description that can't be change for an object like the id, or other name or age etc the propeties and the values are state becaus ethey can change
